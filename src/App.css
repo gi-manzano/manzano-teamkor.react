@@ -1,7 +1,10 @@
+body {
+  background-color: rgb(255, 255, 255);
+}
 
-
-.App {
+.p {
   text-align: center;
+
 }
 
 .App-logo {

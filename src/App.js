@@ -16,7 +16,6 @@ function App() {
       <NavBar></NavBar>
       <ItemListContainer greetin='Hora de activar!!'></ItemListContainer>
       <ConHijos>
-        <div>Hola</div>
       </ConHijos>
     </div>
   );
