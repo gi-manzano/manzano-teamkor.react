@@ -11,13 +11,15 @@ function App() {
 
 
   return (
-    <div>
+    <>
     
       <NavBar></NavBar>
-      <ItemListContainer greetin='Hora de activar!!'></ItemListContainer>
       <ConHijos>
+      <ItemListContainer greetin='Hora de activar 🏋️‍♀️!!'></ItemListContainer>
       </ConHijos>
-    </div>
+      
+
+    </>
   );
   
 }
