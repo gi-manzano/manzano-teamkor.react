@@ -1,22 +1,41 @@
-//ejemplo de clase 23/04/2022 no aplica para la entrega de tp// este componente no esta utilizado ni aplicado a la app//
-import {useState} from 'react'
+import React from 'react'
+import { useState } from 'react'
+import { useEffect } from 'react'
 
-const Contador = () => {
-    const [suma, setSuma] = useState(0)
+const Contador = () => { 
 
-    const onClickHandler = () => {
-        
-        console.log('click')
-        setSuma (suma + 1)
-        }
+ const [suma, setSuma ] = useState(0)
+ 
+ 
+ //*render 1 //hook
+ useEffect (() => {
+  console.log ('Efecto');
+ })
 
-    console.log ('Aqui hay un render');
+ //*render 2 //hook
+ useEffect (() => {
+  console.log ('Efecto in mounting');
+ }, [])
+
+//*render 3 //hook
+ useEffect (() => {
+  console.log ('Efecto cambio en suma');
+ }, [suma])
+
+ 
+
+  const onClickHandler = ()=> {
+    console.log ('click')
+    setSuma (suma + 1)
+  }
 
 
+  
 
   return (
     <div>
-        <button onClick={onClickHandler} className="btn">Click aqui</button>
+     <button onClick={onClickHandler} className="btn btn-outline btn-primary">Click here!</button>
+     {suma} 
     </div>
   )
 }
