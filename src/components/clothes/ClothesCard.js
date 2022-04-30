@@ -4,14 +4,15 @@ import React from 'react'
 
 const ClothesCard = ( {data}) => {
   return (
-    <div class="card w-96 shadow-xl bg-black">
+    <div className="card w-96 shadow-xl bg-gray-900 font-mono text-lg text-slate-300" >
     <div className='border-2 border-pink-600 m-2 p-2'>
 
               
                 <figure></figure><img className='h-15 ' src={`https://robohash.org/${data.id}`} alt=""/> 
       
-                <div>{data.tipo}</div>
+                
                 <div class="card-body">
+                <div>{data.tipo}</div>
                 <div>{data.pictureUrl}</div>
                 <div>{data.name}</div>
                 
