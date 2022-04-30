@@ -10,7 +10,7 @@ const ItemList = () => {
        
         const getProducts = new Promise ( (resolve, reject) => {
             setTimeout (() => {
-            resolve (productsData)  //*repasar consultar por reject y cathch
+            resolve (productsData)  
         }, 2000 )
 
         })
