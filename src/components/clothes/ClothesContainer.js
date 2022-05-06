@@ -6,12 +6,15 @@ import ClothesCard from './ClothesCard'
 
 
 const ClothesContainer = () => {
+    
 
-    const [clothes, setclothes] = useState([])
+    const [clothes, setclothes] = useState([]);
+    
     const [loading, setLoading] = useState (true)
 
     
     useEffect(() => {
+
         getClothes().then ( data => {
             setLoading (false)
             setclothes ( data )
@@ -22,28 +25,32 @@ const ClothesContainer = () => {
 
     const getClothes = () => { 
         return new Promise ((resolve, reject) => {
+            
             setTimeout (() => {
                 resolve(clothesData)
 
             }, 3000);
+            
+            console.log (clothesData);
 
-        })
+        }) 
     }
     
 
 
   return (
-    <div>
-        { loading ?
-            <h1>Loading...</h1>
+      
+    <section>
 
+        { loading ? <p>Cargando productos...</p>
         :
-
-         clothes.map ( c => <ClothesCard key={c.id} data={c} />)
-        
+        clothes.map ( clothes => 
+                    <ClothesCard 
+                    key={clothes.id} 
+                    data={clothes} />)
         }
 
-    </div>
+    </section>
   )
 }
 

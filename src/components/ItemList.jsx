@@ -1,6 +1,6 @@
 import { useEffect , useState } from 'react';
 import {products as productsData} from "../data/clothes.js";
-import ProductCard from './ProductCard.js';
+import ProductCard from '../components/cards/ProductCard';
 
 const ItemList = () => { 
 

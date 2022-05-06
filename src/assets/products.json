@@ -1,0 +1,81 @@
+[
+   { "id": 1,
+       " name" :" Pantalón Ryder", 
+       " tipo":"Fuera", 
+       " precio" : 1200, 
+        "image": "https://i.pinimg.com/564x/da/a7/bc/daa7bc0af89675e9d40dab7a10b33dc3.jpg",
+        "stock":6
+    },
+
+    { "id": 2,
+        " name" :"Calza Alika", 
+        " tipo":"Fuera", 
+        " precio" : 1700, 
+         "image":"https://i.pinimg.com/564x/66/a2/44/66a244483ac51e26200895388a50d6ef.jpg",
+         "stock":4
+     },
+
+     { "id": 3,
+        " name" :"Buzo Magna", 
+        " tipo":"Fuera", 
+        " precio" :3000, 
+         "image":"https://i.pinimg.com/564x/56/f9/e7/56f9e70373307c13270964d453e199ce.jpg",
+         "stock":6
+     },
+     { "id": 4,
+        " name" :"Remera safari ", 
+        " tipo":"Fuera", 
+        " precio" : 1500, 
+         "image": "https://i.pinimg.com/564x/f1/38/7d/f1387de2f88a175f1e7467a1b086cbaf.jpg",
+         "stock":2
+     },
+
+     { "id": 5,
+        " name" :"Top Furia", 
+        " tipo":"Dentro", 
+        " precio" : 1200, 
+         "image": "https://i.pinimg.com/564x/33/52/fc/3352fc322422b364ca02e4394ad9fd4b.jpg",
+         "stock": 3
+     },
+
+     { "id": 6,
+        " name" :" Top qimba", 
+        " tipo":"Dentro", 
+        " precio" : 1300, 
+         "image": "https://i.pinimg.com/564x/52/66/38/526638a577c1a433e3a6fc5b07a1417b.jpg",
+         "stock": 2
+     },
+
+     { "id": 7,
+        " name" :" Short Nube", 
+        " tipo":"Fuera", 
+        " precio" : 2700, 
+         "image": "https://i.pinimg.com/564x/66/73/4e/66734eadf351abf999d03524572af10f.jpg",
+         "stock": 6
+     },
+
+     { "id": 8,
+        " name" :" Top Elemento", 
+        " tipo":"Fuera", 
+        " precio" : 1800, 
+         "image": "https://i.pinimg.com/564x/5b/d2/c7/5bd2c778849747d6c29805786e26a2b5.jpg",
+         "stock": 5
+     },
+
+     { "id": 9,
+        " name" :"Conjunto Azu ", 
+        " tipo":"Dentro", 
+        " precio" : 4500, 
+         "image": "https://i.pinimg.com/564x/64/99/03/6499034d16cc2fbf655a288b8511a49c.jpg",
+         "stock": 7
+     },
+
+     { "id": 10,
+        " name" :" Buzo Duma", 
+        " tipo":"Fuera", 
+        " precio" : 4000, 
+         "image": "https://i.pinimg.com/564x/b9/68/20/b968200354b83ee6dbbb775fd566edaf.jpg",
+         "stock": 3
+     }
+     
+]
