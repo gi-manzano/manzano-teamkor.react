@@ -61,7 +61,7 @@ const NavBar = () => {
     <nav href="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-pink-700	flex flex-wrap items-center text-base justify-center">
       <Link to='/home' className="mr-5 hover:text-white"> Home</Link>
       <Link to='/clothes' className="mr-5 hover:text-white"> Clothes</Link>
-      <Link to='/' className="mr-5 hover:text-white"> Worktout</Link>
+      <Link to='/worktout' className="mr-5 hover:text-white"> Worktout</Link>
     </nav>
  
   </div>

@@ -4,7 +4,7 @@ import ItemListContainer from '../components/itemListContainer/ItemListContainer
 import NavBar from '../components/NavBar';
 import ClothesContainer from '../components/clothes/ClothesContainer';
 import ClothesDetail from '../components/clothes/ClothesDetail';
-import Home from "../pages/Home";
+
 
 const AppRouter = () => {
     return (
@@ -12,7 +12,7 @@ const AppRouter = () => {
           <BrowserRouter>
               <NavBar></NavBar>
               <Routes> 
-                <Route path='/' element={<Home/>}/> 
+                <Route path='/*' element = {<ClothesContainer/>}/>
                 <Route path='/home' element={<ItemListContainer/>}/>  
                 <Route path='/clothes' element={<ClothesContainer/>}/>
                 <Route path='/clothes/:clothesId' element={<ClothesDetail/>}/>  
