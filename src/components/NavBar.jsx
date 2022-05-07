@@ -6,7 +6,7 @@ const NavBar = () => {
     <>
     
     <CartWidget></CartWidget>
-    <div className="navbar bg-base-100-pink">
+    <div className="navbar bg-base-100-pink flex">
   <div className="flex-1">
     <button className="btn btn-ghost normal-case text-xl"></button>
   </div>
@@ -54,7 +54,7 @@ const NavBar = () => {
   
     <Link to='/' href="flex title-font font-medium items-center text-white mb-4 md:mb-0">
       <span className="ml-3 text-xl p-10 w-10 m-5">Teamwork
-      <img className= "w-20 m-15 items-center" src="https://seeklogo.com/images/S/sport-logo-8D3DF7BB3A-seeklogo.com.png" alt="logo"></img>
+      <img className= "flex w-20 m-15 items-center" src="https://seeklogo.com/images/S/sport-logo-8D3DF7BB3A-seeklogo.com.png" alt="logo"></img>
       </span>
     </Link>
 
