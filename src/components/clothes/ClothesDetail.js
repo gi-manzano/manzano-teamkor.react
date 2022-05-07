@@ -34,14 +34,15 @@ const getClothesDetail = () => {
 
   return (
     
+  
 
     <div className="card flex w-96 ml-4 mt-6 mb-8 bg-green border-solid border-2 border-sky-500" data-aos="flip-left">
       <h2 className="card-title ml-4">Detalle de producto!</h2>
     
   <div classNane="card-body">
      <div className="text-left ml-4 ">
-       <div><strong>{clothes.id}</strong></div>
-       <div>{clothes.imgURL}</div>
+       {/* <div><strong>{clothes.id}</strong></div> */}
+       <figure><img className="h-15" src= { `https://robohash.org/${clothes.id}`} alt=""/></figure> 
        <div>{clothes.name}</div>
        <div>{clothes.tipo}</div>
        <div>${clothes.precio}</div>
