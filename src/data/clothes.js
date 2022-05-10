@@ -7,7 +7,7 @@ export const products = [
         name: 'Pantalon', 
         tipo:'out door', 
         precio :1200, 
-        imgURL:'',
+        img:'/fotos/pantalon.jpg',
         stock:4
     },
 
@@ -16,7 +16,7 @@ export const products = [
         name: 'Buzo', 
         tipo:'out door', 
         precio :1200, 
-        pictureUrl:'',
+        img:'/fotos/buzo1.jpg',
         stock:4
     },
 
@@ -25,7 +25,7 @@ export const products = [
         name: 'Remea', 
         tipo:'in door', 
         precio :1200, 
-        pictureUrl:'',
+        img:'/fotos/remera.jpg',
         stock:4
     },
 
@@ -34,45 +34,29 @@ export const products = [
         name: 'Calza', 
         tipo:'in door', 
         precio :1200, 
-        imgUrl:'',
+        img:'/fotos/calza2.jpg',
         stock:4
     },
 
     {  
-         id: 5,
+        id: 5,
         name: 'Top', 
         tipo:'workout', 
         precio :1200, 
-        pictureUrl:'',
+        img:'/fotos/top1.jpg',
         stock:4
     },
 
     {  
-         id: 6,
-        name: 'Short', 
+        id: 6,
+        name: 'Top', 
         tipo:'workout', 
         precio :1200, 
-        pictureUrl:'',
+        img:'/fotos/top2.jpg',
         stock:4
     },
 
-    {  
-         id: 7,
-        name: 'Medias', 
-        tipo:'in door', 
-        precio :1200, 
-        pictureUrl:'',
-        stock:4
-    },
 
-    {   
-        id: 8,
-        name: 'Guantes', 
-        tipo:'workout', 
-        precio :1200, 
-        pictureUrl:'',
-        stock:4
-    },
     
     
 ];

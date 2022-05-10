@@ -4,43 +4,43 @@ export const clothesData =
 [
 
 {   
-    id: 15,
+    id: 1,
     name: 'Pantalon Raider', 
     tipo:'Outdoor', 
     precio :1200, 
     stock:4,
-    imgUrl: ''
+    img: '/fotos/pantalon.jpg'
 },
 
-{   id: 28,
+{   id: 2,
     name: 'Buzo Magna', 
     tipo:'Outdoor', 
     precio :1200, 
-    img:'',
+    img:'/fotos/buzo1.jpg',
     stock:4
 },
 
-{   id: 37,
+{   id: 3,
     name: 'Remea Zafari', 
     tipo:'Indoor', 
     precio :1200, 
-    img:'',
+    img:'/fotos/remera.jpg',
     stock:4
 },
 
-{   id: 46,
+{   id: 4,
     name: 'Calza Strong', 
     tipo:'Indoor', 
     precio :1200, 
-    imgUrl:'',
+    img:'/fotos/calza2.jpg',
     stock:4
 },
 
-{   id: 57,
+{   id: 5,
     name: 'Top Smille', 
     tipo:'Workout', 
     precio :1200, 
-    imgUrl:'',
+    img:'/fotos/top1.jpg',
     stock:4
 },
 
