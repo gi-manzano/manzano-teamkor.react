@@ -49,7 +49,7 @@ export const products = [
 
     {  
         id: 6,
-        name: 'Top', 
+        name: 'Top Tuluz', 
         tipo:'workout', 
         precio :1200, 
         img:'/fotos/top2.jpg',

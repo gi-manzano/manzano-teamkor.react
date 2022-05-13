@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useEffect, useState } from 'react'
+import { DarkModeContext } from '../../context/darkModeContext'
 import { clothesData } from '../../data/clothesData'
 import ClothesCard from './ClothesCard'
 
 
 
 const ClothesContainer = () => {
-    
+
+    const darkMode = useContext (DarkModeContext)
+
 
     const [clothes, setclothes] = useState([]);
     
@@ -29,7 +32,7 @@ const ClothesContainer = () => {
             setTimeout (() => {
                 resolve(clothesData)
 
-            }, 3000);
+            }, 2000);
             
             console.log (clothesData);
 
@@ -38,20 +41,23 @@ const ClothesContainer = () => {
     
 
 
-  return (
-      
+return (
+
     <section>
+    <div className={ darkMode ? 'bg-black text-white' : 'bg-white text-black'}>
 
-        { loading ? <p>Cargando productos...</p>
+        <strong>{ darkMode ? 'Modo: activado' : 'Modo: desactivado'}</strong>
+
+        { loading ? <p className='text-black'> Cargando productos...</p>
         :
-        clothes.map ( clothes => 
-                    <ClothesCard 
-                    key={clothes.id} 
-                    data={clothes} />)
+        clothes.map ( clothes => <ClothesCard key={clothes.id} data={clothes} />)
         }
-
+        
+    </div>
     </section>
-  )
+
+
+)
 }
 
 export default ClothesContainer

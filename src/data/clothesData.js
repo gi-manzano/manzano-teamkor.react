@@ -16,33 +16,53 @@ export const clothesData =
     name: 'Buzo Magna', 
     tipo:'Outdoor', 
     precio :1200, 
-    img:'/fotos/buzo1.jpg',
-    stock:4
+    stock: 6,
+    img:'/fotos/buzo1.jpg'
+    
 },
 
 {   id: 3,
     name: 'Remea Zafari', 
     tipo:'Indoor', 
     precio :1200, 
-    img:'/fotos/remera.jpg',
-    stock:4
+    stock:5,
+    img:'/fotos/remera.jpg'
 },
 
 {   id: 4,
     name: 'Calza Strong', 
     tipo:'Indoor', 
     precio :1200, 
-    img:'/fotos/calza2.jpg',
-    stock:4
+    stock:9,
+    img:'/fotos/calza2.jpg'
 },
 
 {   id: 5,
     name: 'Top Smille', 
     tipo:'Workout', 
     precio :1200, 
-    img:'/fotos/top1.jpg',
-    stock:4
+    stock:3,
+    img:'/fotos/top1.jpg'
 },
 
+{  
+        id: 6,
+        name: 'Top Tuluz', 
+        tipo:'workout', 
+        precio :1200, 
+        stock:6,
+        img:'/fotos/top2.jpg'
+    },
+
     
-];
+]
+
+
+//* para context carritoCount
+const task = new Promise ((resp) =>{
+    resp (clothesData)
+}, 2000)
+
+export const getItem = () => {
+    return task
+}
