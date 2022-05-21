@@ -1,58 +1,47 @@
 import React, { useContext } from 'react'
 import { useEffect, useState } from 'react'
 import { DarkModeContext } from '../../context/darkModeContext'
-import { clothesData } from '../../data/clothesData'
-import ClothesCard from './ClothesCard'
+import { itemData } from '../../data/itemData'
+import ItemCard from './ItemCard'
 
 
 
-const ClothesContainer = () => {
+
+const ItemContainer = () => {
 
     const darkMode = useContext (DarkModeContext)
 
 
     const [clothes, setclothes] = useState([]);
-    
     const [loading, setLoading] = useState (true)
 
     
     useEffect(() => {
-
         getClothes().then ( data => {
             setLoading (false)
             setclothes ( data )
-
         });
 
     }, [])
 
     const getClothes = () => { 
         return new Promise ((resolve, reject) => {
-            
             setTimeout (() => {
-                resolve(clothesData)
-
+            resolve(itemData)
             }, 2000);
-            
-            console.log (clothesData);
-
         }) 
     }
-    
 
+    if (loading) {
+        return <h1 className="text-3xl"> Cargando productos... </h1>
+    }
 
 return (
 
     <section>
     <div className={ darkMode ? 'bg-black text-white' : 'bg-white text-black'}>
-
         <strong>{ darkMode ? 'Modo: activado' : 'Modo: desactivado'}</strong>
-
-        { loading ? <p className='text-black'> Cargando productos...</p>
-        :
-        clothes.map ( clothes => <ClothesCard key={clothes.id} data={clothes} />)
-        }
-        
+        {(clothes.map ( clothes => <ItemCard key={clothes.id} data={clothes} />))}   
     </div>
     </section>
 
@@ -60,4 +49,4 @@ return (
 )
 }
 
-export default ClothesContainer
+export default ItemContainer

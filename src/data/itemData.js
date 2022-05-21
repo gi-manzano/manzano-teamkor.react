@@ -1,5 +1,5 @@
 
-export const clothesData = 
+export const itemData = 
 
 [
 
@@ -58,9 +58,9 @@ export const clothesData =
 ]
 
 
-//* para context carritoCount
+// para context carritoCount
 const task = new Promise ((resp) =>{
-    resp (clothesData)
+    resp (itemData)
 }, 2000)
 
 export const getItem = () => {

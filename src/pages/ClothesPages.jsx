@@ -1,11 +1,11 @@
 import React from 'react'
-import ClothesContainer from '../components/clothes/ClothesContainer'
+import ItemContainer from '../components/items/ItemContainer'
 
 const ClothesPages = () => {
   return (
     <main>
         <p>Lista de indumentaria</p>
-        <ClothesContainer/>
+        <ItemContainer/>
     </main>
   )
 }

@@ -1,6 +1,6 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
-import { getItem } from "../data/clothesData";
+import { getItem } from "../data/itemData";
 
 
 const AppContext = createContext ()

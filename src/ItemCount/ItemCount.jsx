@@ -33,27 +33,21 @@ const ItemCount = ({ stock, onAdd, id }) => {
 
 	return (
 		<>
-			<div className="flex gap-4 mt-4">
-				<div className="flex flex-row">
-					<button className="btn " onClick={handleRemove}>
-						<i className="fas fa-minus"></i>
-					</button>
+				<div className="flex flex-col text-center">
+				<div className="p-2">
+					<button onClick={handleRemove} className='border rounded-md px-1  hover:bg-sky-800'> - </button>
 					<label className="alert alert-white">{count}</label>
-					<button className="btn " onClick={handleAdd}>
-						<i className="fas fa-plus"></i>
-					</button>
+					<button onClick={handleAdd} className='border rounded-md px-1  hover:bg-sky-800'> + </button>
 				</div>
 				<div>
-					<button
-						className="btn bg-primary text-white btn-block "
-						onClick={() => handleClick(id, count)}
-					>
-						Agregar al Carrito
-					</button>
+					<button onClick={() => handleClick(id, count)}> Agregar al Carrito </button>
 				</div>
-			</div>
+				</div>
+			
 		</>
 	)
 }
 
 export default ItemCount
+
+

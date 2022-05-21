@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { getItem } from '../../data/clothesData'
-import ClothesDetail from './ClothesDetail'
+import { getItem } from '../../data/itemData'
+import ItemDetail from './ItemDetail'
 
-const ClothesDetailContainer = () => {
+
+const ItemDetailContainer = () => {
     const [products, setProducts] = useState ({}) 
     const { id } = useParams ()
 
@@ -17,9 +18,9 @@ const ClothesDetailContainer = () => {
     
   return (
     <div className="container mx-auto my-8 max-w-4xl h-screen">
-        <ClothesDetail producto={products} />
+        <ItemDetail producto={products} />
     </div>
   )
 }
 
-export default ClothesDetailContainer
+export default ItemDetailContainer
