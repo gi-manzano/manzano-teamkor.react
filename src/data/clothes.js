@@ -1,5 +1,3 @@
-//*utilizada en itemList
-
 export const products = [
 
     {   

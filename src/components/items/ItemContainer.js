@@ -4,14 +4,9 @@ import { DarkModeContext } from '../../context/darkModeContext'
 import { itemData } from '../../data/itemData'
 import ItemCard from './ItemCard'
 
-
-
-
 const ItemContainer = () => {
 
     const darkMode = useContext (DarkModeContext)
-
-
     const [clothes, setclothes] = useState([]);
     const [loading, setLoading] = useState (true)
 
@@ -21,9 +16,7 @@ const ItemContainer = () => {
             setLoading (false)
             setclothes ( data )
         });
-
     }, [])
-
     const getClothes = () => { 
         return new Promise ((resolve, reject) => {
             setTimeout (() => {
@@ -44,7 +37,6 @@ return (
         {(clothes.map ( clothes => <ItemCard key={clothes.id} data={clothes} />))}   
     </div>
     </section>
-
 
 )
 }

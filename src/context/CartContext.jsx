@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useState } from "react"
 
 const CartContext = createContext()
-
 export const useCartContext = () => useContext(CartContext)
 
 const CartContextProvider = ({ children }) => {
@@ -17,7 +16,6 @@ const CartContextProvider = ({ children }) => {
 
 		const productsIsInCart = isInCart(products.id)
 		if (productsIsInCart) {
-
 			newCart[
 				newCart.findIndex((prod) => prod.id === productsIsInCart.id)
 			].quantity += cantidad
@@ -28,22 +26,21 @@ const CartContextProvider = ({ children }) => {
 		}
 	}
 	// delete item de cart
-	const deleteFromCart = (products) => {
-		const newCart = [...cart]
-		const productsIsInCart = isInCart(products.id)
-		if (!productsIsInCart) 
-		{ return }
-		const deleteProducts = newCart.filter((prod) => prod.id !== products.id)
-		setCart(deleteProducts)
+	const deleteFromCart = (id) => {
+		const productsRemoved = cart.filter((products) => products.id !== id);
+		setCart (productsRemoved);
 	}
-
 	const deleteCart = () => setCart([])
-	// console.log(cart)
-
+	
 	//cantidad en carrito 
 	 const cantidadInCart = () =>
 	{ let total = 0;
-	 return total}
+		cart.forEach ((products)=> {
+			total = total + products.quantity
+		});
+	 return total;
+	};
+	
 
 	//calcular el total
 	const calcularTotal = () => {
