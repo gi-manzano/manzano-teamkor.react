@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { useAppContext } from "../context/AppContex"
-import { useCartContext } from "../context/CartContext"
+import {  useCartContext } from "../context/CartContext"
+// import { useCartContext } from "../context/CartContext"
 
 const ItemCount = ({ stock, onAdd, id }) => {
 	const [count, setCount] = useState(0)

@@ -1,11 +1,11 @@
 import React ,{ useContext } from 'react';
-import CartContextProvider from "../../context/CartContext";
+import CartContext from "../../context/CartContext";
 import { Link } from "react-router-dom";
 
 
 const CartItem = ({data}) => {
 
-    const { deleteProducts } = useContext (CartContextProvider);
+    const { deleteProducts } = useContext (CartContext);
 
   return (
     <section className="text-gray-600 body-font">

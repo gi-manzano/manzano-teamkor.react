@@ -16,37 +16,43 @@ const CartContextProvider = ({ children }) => {
 		const newCart = [...cart]
 
 		const productsIsInCart = isInCart(products.id)
-
 		if (productsIsInCart) {
+
 			newCart[
 				newCart.findIndex((prod) => prod.id === productsIsInCart.id)
 			].quantity += cantidad
-
-			setCart(newCart)
-			return
-		}
-
+			setCart(newCart);
+		} else {
 		products.quantity = cantidad
-		setCart([...newCart, products])
+		setCart((previousCart) => [...newCart, products])
+		}
 	}
-
+	// delete item de cart
 	const deleteFromCart = (products) => {
 		const newCart = [...cart]
-
 		const productsIsInCart = isInCart(products.id)
-
-		if (!productsIsInCart) {
-			return
-		}
-
+		if (!productsIsInCart) 
+		{ return }
 		const deleteProducts = newCart.filter((prod) => prod.id !== products.id)
-
 		setCart(deleteProducts)
 	}
 
 	const deleteCart = () => setCart([])
+	// console.log(cart)
 
-	console.log(cart)
+	//cantidad en carrito 
+	 const cantidadInCart = () =>
+	{ let total = 0;
+	 return total}
+
+	//calcular el total
+	const calcularTotal = () => {
+		let total = 0;
+		cart.forEach ((products) => {
+			total = total + products.precio * products.quantity;
+		});
+		return total;
+	};
 
 	return (
 		<CartContext.Provider
@@ -56,6 +62,9 @@ const CartContextProvider = ({ children }) => {
 				deleteFromCart,
 				deleteCart,
 				setCart,
+				isInCart,
+				calcularTotal,
+				cantidadInCart,
 			}}
 		>
 			{children}
@@ -64,4 +73,3 @@ const CartContextProvider = ({ children }) => {
 }
 
 export default CartContextProvider;
-
