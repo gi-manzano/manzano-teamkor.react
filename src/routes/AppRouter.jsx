@@ -10,6 +10,7 @@ import CartContextProvider from "../context/CartContext";
 import CartView from "../components/Cart/CartView";
 import Home from "../pages/Home";
 import Contacto from "../pages/Contacto";
+import PantalonRided from "../components/Store/PantalonRided";
 
 
 
@@ -39,6 +40,7 @@ const AppRouter = () => {
                 <Route path='/Contacto' element={<Contacto/>}/>
                 <Route path='/clothes/:clothesId' element={<ItemDetail/>}/>
                 <Route path='/carrito'  element={<CartView/>}/>
+                <Route path='/store' element={<PantalonRided/>}/>
               </Routes>
             </BrowserRouter>
             </CartContextProvider>
