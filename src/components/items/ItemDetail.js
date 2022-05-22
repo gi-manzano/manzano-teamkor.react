@@ -56,12 +56,12 @@ function onAdd (count) {
         <h3>$ {clothes.precio}</h3>
       </div>
       <button className="card-actions justify-center m-5 btn bg-indigo-700 transition duration-150 ease-out hover:ease-in">
-        <Link className="inline-block align-middle mt-4 text-white" to='/clothes'> Ir a Pagina principal </Link>
+        <Link className="inline-block align-middle mt-4 text-white" to='/clothes'> Seguir comprando </Link>
       </button>
       
       {isInCart ? 
           ( <Link to="/carrito" className="btn text-white btn-block "> 
-          Ir a carrito
+          Ver carrito
             </Link>
           ) : ( <ItemCount stock={clothes.stock} onAdd={onAdd} />)
       }
@@ -72,3 +72,4 @@ function onAdd (count) {
   )}
 
 export default ItemDetail
+

@@ -15,7 +15,7 @@ const ItemListContainer = ( {greetin} ) => {
     
     </div>
 
-    <strong>
+    <strong >
       { darkMode ? 'Modo: activado' :
       'Modo: desactivado'}
     </strong>

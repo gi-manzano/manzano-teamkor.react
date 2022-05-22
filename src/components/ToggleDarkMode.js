@@ -7,7 +7,7 @@ const ToggleDarkMode = ({darkModeHandler}) => {
 
   return (
       
-    <button onClick={darkModeHandler} className='btn'>
+    <button onClick={darkModeHandler} className='btn btn-outline btn-success'>
    { darkMode ? 'Desactivar': 'Activar'} Dark Mode
     </button>
   )

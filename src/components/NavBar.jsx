@@ -11,6 +11,9 @@ const NavBar = () => {
 
     <>
       <header className="text-sky-100 bg-sky-900 body-font">
+        <Link to="/carrito">
+        {<CartWidget/>}
+        </Link>
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <Link to='/' href="flex title-font font-medium items-center text-white mb-4 md:mb-0">
             <span className="ml-2 text-xl p-5 w-5 m-5"> Teamwork
@@ -23,15 +26,9 @@ const NavBar = () => {
             <Link to='/worktout' className="inline-flex items-center border-0 py-1 px-3 mx-1 focus:outline-none bg-pink-300 hover:bg-pink-800 hover:text-white rounded-full text-base mt-4 md:mt-0"> Worktout </Link>
           </nav>  
         </div> 
-      </header>
-     <Link to="/carrito">
-        {<CartWidget/>}
-     </Link>
-       
-      
-     
+    </header>
+
     </>
-   
   )
 }
 

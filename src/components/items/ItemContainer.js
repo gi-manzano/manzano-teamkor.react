@@ -23,10 +23,10 @@ const ItemContainer = () => {
             resolve(itemData)
             }, 2000);
         }) 
-    }
-
+    } 
+    
     if (loading) {
-        return <h1 className="text-3xl"> Cargando productos... </h1>
+        return <h1 className="text-3xl"> Cargando productos... </h1> 
     }
 
 return (

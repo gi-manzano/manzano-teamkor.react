@@ -61,7 +61,7 @@ export const itemData =
 // para context carritoCount
 const task = new Promise ((resp) =>{
     resp (itemData)
-}, 2000)
+}, 1000)
 
 export const getItem = () => {
     return task

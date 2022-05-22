@@ -26,12 +26,11 @@ const AppRouter = () => {
     return (
       <>
       <DarkModeContext.Provider value={darkMode}> 
-      
         <AppContextProvider>
          <CartContextProvider> 
             <BrowserRouter>
-              <NavBar/>
               <ToggleDarkMode darkModeHandler={darkModeHandler}/> 
+              <NavBar/>
               <Routes> 
                 <Route path='/*' element = {<ItemContainer/>}/>
                 <Route path='/home' element={<ItemListContainer/>}/>  
@@ -42,7 +41,6 @@ const AppRouter = () => {
             </BrowserRouter>
             </CartContextProvider>
         </AppContextProvider>
-
       </DarkModeContext.Provider> 
       </>
       
