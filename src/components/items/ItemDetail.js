@@ -43,20 +43,21 @@ function onAdd (count) {
 } 
 
   return (
-
     
-  <div className='flex flex-col m-5 p-12 border-2 rounded-lg backdrop-green'>
+  <div className='flex flex-col m-20 border-2 rounded-lg'>
     
-      <p className='pb-2 text-2xl'>Detalle de producto!</p>
+      <p className='pb-5 m-2 text-2xl'>Detalle de producto!</p>
       <div className='text-justify-center ml-4 text-withe'>
-        <img className='w-48 pb-6 max-w-xs hover:shadow-lg transition duration-300 ease-in-out' src= {clothes.img} alt={clothes.id}/> 
+        <img className='max-w-xs hover:shadow-lg transition duration-300 ease-in-out rounded-lg ' src= {clothes.img} alt={clothes.id}/> 
+        <hr/> 
+        <br/>
         <div>{clothes.name}</div>
         <div>{clothes.tipo}</div>
         <div>Stock: {clothes.stock}</div>
         <h3>$ {clothes.precio}</h3>
       </div>
-      <button className="card-actions justify-center m-5 btn bg-indigo-700 transition duration-150 ease-out hover:ease-in">
-        <Link className="inline-block align-middle mt-4 text-white" to='/clothes'> Seguir comprando </Link>
+      <button className="btn card-actions m-2 bg-indigo-500 transition duration-150 ease-out hover:ease-in">
+        <Link className="inline-block align-middle m-4 text-white" to='/clothes'> Seguir comprando </Link>
       </button>
       
       {isInCart ? 

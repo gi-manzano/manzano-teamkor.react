@@ -3,7 +3,7 @@ import {useCartContext} from "../../context/CartContext"
 
 function CartView () {
 
-    const { cart, calcularTotal, deleteFromCart,  } = useCartContext ();
+    const { cart, calcularTotal, deleteFromCart } = useCartContext ();
 
     return (
     <div className="card-body">
@@ -18,8 +18,7 @@ function CartView () {
                     <hr/>
                     <br/>
                     <br/>   
-                </div>
-                
+                </div>   
             ))}
             <h1>Total de tu compra: $ {calcularTotal ()}</h1>
             <hr/>

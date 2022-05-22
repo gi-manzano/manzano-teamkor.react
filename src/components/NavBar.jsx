@@ -22,8 +22,8 @@ const NavBar = () => {
           </Link>
           <nav href="md:mr-auto md:ml-4 md:py-1 md:pl-4  md:border-pink-700	flex flex-wrap items-center ">
             <Link to='/home' className="inline-flex items-center border-0 py-1 px-3 mx-1 focus:outline-none bg-pink-300 hover:bg-pink-800 hover:text-white rounded-full text-base mt-4 md:mt-0"> Home </Link>
-            <Link to='/clothes' className="inline-flex items-center border-0 py-1 px-3 mx-1 focus:outline-none bg-pink-300 hover:bg-pink-800 hover:text-white rounded-full text-base mt-4 md:mt-0"> Clothes </Link>
-            <Link to='/worktout' className="inline-flex items-center border-0 py-1 px-3 mx-1 focus:outline-none bg-pink-300 hover:bg-pink-800 hover:text-white rounded-full text-base mt-4 md:mt-0"> Worktout </Link>
+            <Link to='/clothes' className="inline-flex items-center border-0 py-1 px-3 mx-1 focus:outline-none bg-pink-300 hover:bg-pink-800 hover:text-white rounded-full text-base mt-4 md:mt-0"> Store </Link>
+            <Link to='/Contacto' className="inline-flex items-center border-0 py-1 px-3 mx-1 focus:outline-none bg-pink-300 hover:bg-pink-800 hover:text-white rounded-full text-base mt-4 md:mt-0"> Contact us </Link>
           </nav>  
         </div> 
     </header>

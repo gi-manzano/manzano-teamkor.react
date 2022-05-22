@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ItemListContainer from '../components/itemListContainer/ItemListContainer';
 import NavBar from '../components/NavBar';
 import { DarkModeContext } from "../context/darkModeContext";
 import { useState } from 'react';
@@ -9,6 +8,8 @@ import ItemDetail from "../components/items/ItemDetail";
 import ItemContainer from "../components/items/ItemContainer";
 import CartContextProvider from "../context/CartContext";
 import CartView from "../components/Cart/CartView";
+import Home from "../pages/Home";
+import Contacto from "../pages/Contacto";
 
 
 
@@ -27,14 +28,15 @@ const AppRouter = () => {
       <>
       <DarkModeContext.Provider value={darkMode}> 
         <AppContextProvider>
-         <CartContextProvider> 
+          <CartContextProvider> 
             <BrowserRouter>
               <ToggleDarkMode darkModeHandler={darkModeHandler}/> 
               <NavBar/>
               <Routes> 
                 <Route path='/*' element = {<ItemContainer/>}/>
-                <Route path='/home' element={<ItemListContainer/>}/>  
+                <Route path='/home' element={<Home/>}/>  
                 <Route path='/clothes' element={<ItemContainer/>}/>
+                <Route path='/Contacto' element={<Contacto/>}/>
                 <Route path='/clothes/:clothesId' element={<ItemDetail/>}/>
                 <Route path='/carrito'  element={<CartView/>}/>
               </Routes>
