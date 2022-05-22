@@ -52,9 +52,8 @@ export const itemData =
         precio :1200, 
         stock:6,
         img:'/fotos/top2.jpg'
-    },
+    }
 
-    
 ]
 
 
