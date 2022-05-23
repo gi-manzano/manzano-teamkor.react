@@ -19,7 +19,7 @@ const PantalonRided = () => {
             console.log(result);
             console.log('id',result.id);
             console.log('data',result.data());
-            setindumentaria (result.data())
+            setindumentaria ({'id': result.id , ...result.data()} )
         }
     })
     }
@@ -31,7 +31,6 @@ const PantalonRided = () => {
         <div>{indumentaria.tipo}  </div>
         <div>Precio:$ {indumentaria.precio}  </div>
         <div>Stock:{indumentaria.stock} </div>
-
     </div>
   )
 }

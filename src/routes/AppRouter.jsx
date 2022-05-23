@@ -11,6 +11,8 @@ import CartView from "../components/Cart/CartView";
 import Home from "../pages/Home";
 import Contacto from "../pages/Contacto";
 import PantalonRided from "../components/Store/PantalonRided";
+import Indumentaria from "../components/Store/Indumentaria";
+import ItemListContainer from "../components/itemListContainer/ItemListContainer";
 
 
 
@@ -40,7 +42,9 @@ const AppRouter = () => {
                 <Route path='/Contacto' element={<Contacto/>}/>
                 <Route path='/clothes/:clothesId' element={<ItemDetail/>}/>
                 <Route path='/carrito'  element={<CartView/>}/>
-                <Route path='/store' element={<PantalonRided/>}/>
+                <Route path='/PantalonRider' element={<PantalonRided/>}/>
+                <Route path='/indumentaria' element={<Indumentaria/>}/>
+                <Route path='/Lista' element={<ItemListContainer/>}/>
               </Routes>
             </BrowserRouter>
             </CartContextProvider>

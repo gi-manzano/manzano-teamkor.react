@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { DarkModeContext } from '../context/darkModeContext'
 import { Link } from 'react-router-dom';
 
 
 
 const Home = () => {
+ 
+  const darkMode = useContext (DarkModeContext)
+  
   return (
+    
+    <div>
     <div className="hero min-h-screen" >
   <div className="hero-overlay bg-opacity-60">
     <figure><img src="/fotos/sporty.jpg" alt=""></img></figure>
@@ -15,8 +21,12 @@ const Home = () => {
       <Link className="btn btn-primary" to="/clothes" >Get Started</Link>
     </div>
   </div>
-</div>
-   
+    </div>
+    <strong >
+          { darkMode ? 'Modo: activado' :
+          'Modo: desactivado'}
+        </strong>
+    </div>
   )
 }
 
