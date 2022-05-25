@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useCartContext } from '../../context/CartContext'
 import { itemData } from '../../data/itemData'
-import ItemCount from '../../itemCount/ItemCount'
+import ItemCount from '../../ItemCount/ItemCount'
 
 const ItemDetail = () => {
   const { clothesId } = useParams ()
@@ -24,16 +24,11 @@ const getItemDetail = () => {
     return new Promise ( (resolve) => {
       setTimeout(() => {
         resolve( itemData.find( c => c.id == clothesId ) )
-      }, 2000);
+      }, 1000);
     })
-  };
+  }; 
 
- // context agregar productos
-// const [terminar, setTerminar] = useState(false)
-//   function onAdd (count)  {
-//   setTerminar (true)}
-//   console.log ('fin')
-const [isInCart, setIsInCart]= useState (false);
+const [isInCart, setIsInCart]= useState (true);
 
 const {cart} = useCartContext();
 console.log (cart);
@@ -61,9 +56,9 @@ function onAdd (count) {
       </button>
       
       {isInCart ? 
-          ( <Link to="/carrito" className="btn text-white btn-block "> 
+          ( <button className='btn card-actions m-2 bg-indigo-500 transition duration-150 ease-out hover:ease-in'> <Link to="/carrito" className="inline-block align-middle m-4 text-white"> 
           Ver carrito
-            </Link>
+            </Link></button>
           ) : ( <ItemCount stock={clothes.stock} onAdd={onAdd} />)
       }
       <ItemCount stock={clothes.stock} onAdd={onAdd} id={clothes.id}/>

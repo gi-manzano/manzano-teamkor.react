@@ -13,10 +13,7 @@ import Contacto from "../pages/Contacto";
 import PantalonRided from "../components/Store/PantalonRided";
 import Indumentaria from "../components/Store/Indumentaria";
 import ItemListContainer from "../components/itemListContainer/ItemListContainer";
-
-
-
- 
+import Finalizado from "../components/Finalizado/Finalizado";
 
 
 const AppRouter = () => {
@@ -36,8 +33,8 @@ const AppRouter = () => {
               <ToggleDarkMode darkModeHandler={darkModeHandler}/> 
               <NavBar/>
               <Routes> 
-                <Route path='/*' element = {<ItemContainer/>}/>
                 <Route path='/home' element={<Home/>}/>  
+                <Route path='/*' element = {<ItemContainer/>}/>
                 <Route path='/clothes' element={<ItemContainer/>}/>
                 <Route path='/Contacto' element={<Contacto/>}/>
                 <Route path='/clothes/:clothesId' element={<ItemDetail/>}/>
@@ -45,6 +42,8 @@ const AppRouter = () => {
                 <Route path='/PantalonRider' element={<PantalonRided/>}/>
                 <Route path='/indumentaria' element={<Indumentaria/>}/>
                 <Route path='/Lista' element={<ItemListContainer/>}/>
+                <Route path='/Finalizado' element={<Finalizado/>}/>
+               
               </Routes>
             </BrowserRouter>
             </CartContextProvider>
@@ -54,5 +53,5 @@ const AppRouter = () => {
       
       );
       
-}
+};
 export default AppRouter;

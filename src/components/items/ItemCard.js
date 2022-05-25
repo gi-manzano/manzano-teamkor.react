@@ -12,7 +12,7 @@ const ItemCard = ( {data}) => { const { tipo, name, precio , id, img} = data;
               <img src= {img} alt={id}/> 
               <div>{ name }</div>
               <div>${ precio }</div>
-              <Link className="btn bg-gradient-to-r from-green-600 to-blue-500 hover:from-pink-500 hover:to-yellow-500" to={`/clothes/${ id }`}> Ver + </Link>
+              <Link className="btn bg-gradient-to-r from-green-600 to-blue-500 hover:from-pink-600 hover:to-yellow-500" to={`/clothes/${ id }`}> Ver + </Link>
             </div>
             </div> 
           </div>

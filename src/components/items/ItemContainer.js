@@ -4,6 +4,7 @@ import { DarkModeContext } from '../../context/darkModeContext'
 import { itemData } from '../../data/itemData'
 import ItemCard from './ItemCard'
 
+
 const ItemContainer = () => {
 
     const darkMode = useContext (DarkModeContext)
@@ -26,14 +27,15 @@ const ItemContainer = () => {
     } 
     
     if (loading) {
-        return <h1 className="text-3xl"> Cargando productos... </h1> 
+        return <button className="btn loading items-center">Caragando Producto</button>
+        
     }
 
 return (
 
     <section>
     <div className={ darkMode ? 'bg-black text-white' : 'bg-white text-black'}>
-        <strong>{ darkMode ? 'Modo: activado' : 'Modo: desactivado'}</strong>
+        <strong>{ darkMode ? 'Modo: On' : 'Modo: Off'}</strong>
         {(clothes.map ( clothes => <ItemCard key={clothes.id} data={clothes} />))}   
     </div>
     </section>

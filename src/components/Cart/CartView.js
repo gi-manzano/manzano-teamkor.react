@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {useCartContext} from "../../context/CartContext"
 
 function CartView () {
@@ -23,7 +24,7 @@ function CartView () {
             <h1>Total de tu compra: $ {calcularTotal ()}</h1>
             <hr/>
             <hr/>
-            <button className="btn">Finalizar Compra</button>
+            <Link to='/Finalizado' className="btn">Finalizar Compra</Link>
         </div>      
     </div>
     ) 

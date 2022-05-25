@@ -6,7 +6,7 @@ export const useCartContext = () => useContext(CartContext)
 const CartContextProvider = ({ children }) => {
 	// Logica carrito de compras
 	const [cart, setCart] = useState([])
-
+	
 	// Validar si existe el item en  carrito
 	const isInCart = (id) => cart.find((products) => products.id === id)
 
@@ -61,12 +61,12 @@ const CartContextProvider = ({ children }) => {
 				setCart,
 				isInCart,
 				calcularTotal,
-				cantidadInCart,
+				cantidadInCart,	
 			}}
 		>
 			{children}
 		</CartContext.Provider>
-	)
-}
+	);
+};
 
 export default CartContextProvider;

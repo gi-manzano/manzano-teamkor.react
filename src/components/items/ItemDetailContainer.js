@@ -17,7 +17,7 @@ const ItemDetailContainer = () => {
     }, [id])
     
   return (
-    <div className="container mx-auto my-8 max-w-4xl h-screen">
+    <div>
         <ItemDetail producto={products} />
     </div>
   )
