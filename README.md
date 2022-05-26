@@ -3,7 +3,6 @@
 
 <p>
 La idea del proyecto es un e-commerce de indumentaria, el nombre Teamwork fue elegido con el fin de generar trabajo en equipo, y que a la hora de hacer actividad fisica sea algo divertido.
-
 </p>
 
 <main>

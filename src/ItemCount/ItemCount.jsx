@@ -33,19 +33,16 @@ const ItemCount = ({ stock, onAdd, id }) => {
 	}
 
 	return (
-		<>
-			<div className="flex flex-col text-center">
-				<div className="p-2">
-					<button onClick={handleRemove} className='border rounded-md px-1  hover:bg-sky-800'> - </button>
-					<label className="alert alert-white">{count}</label>
-					<button onClick={handleAdd} className='border rounded-md px-1  hover:bg-sky-800'> + </button>
-				</div>
-				<div>
-					<button className="btn bg-pink-800" onClick={() => handleClick(id, count)}> Agregar al Carrito </button>
-				</div>
-				</div>	
-			
-		</>
+	<>
+	<div className="flex flex-col text-center">
+			<div className="p-2">
+				<button onClick={handleRemove} className='border rounded-md px-1  hover:bg-sky-800'> - </button>
+				<label className="alert alert-white">{count}</label>
+				<button onClick={handleAdd} className='border rounded-md px-1  hover:bg-sky-800'> + </button>
+			</div>
+		<div><button className="btn bg-pink-800" onClick={() => handleClick(id, count)}> Agregar al Carrito </button></div>
+	</div>		
+	</>
 	)
 }
 

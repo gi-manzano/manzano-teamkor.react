@@ -25,7 +25,7 @@ function Contacto() {
                                 TEAMWORK SPORTY
                             </h2>
                             <p className="mt-1">
-                               Marylebond, 27 Suxsex Gardens, Londres.
+                            Marylebond, 27 Suxsex Gardens, Londres.
                             </p>
                         </div>
                         <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">

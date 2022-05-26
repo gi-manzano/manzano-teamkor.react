@@ -4,10 +4,7 @@ import { getItem } from "../data/itemData";
 
 
 const AppContext = createContext ()
-
 export const useAppContext = () => useContext ( AppContext )
-
-
 
 const AppContextProvider = ({ children }) => {
     const [products, setProducts ] = useState ([])
@@ -18,6 +15,6 @@ const AppContextProvider = ({ children }) => {
     return (
         <AppContext.Provider value={{products}}>{children}</AppContext.Provider>
     )
-}
+};
 
-export default AppContextProvider
+export default AppContextProvider;

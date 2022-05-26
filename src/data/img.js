@@ -28,8 +28,17 @@ export const img = [
          img: '/fotos/conjunto3.jpg'
         },
 
-       
+       {
+        id:12,
+        name: 'Logo1',
+        img: '/fotos/Logo1.jpg'
+       },
 
+       {
+        id:12,
+        name: 'Logo2',
+        img: '/logos/sport-logo.png'
+       },
        
 
 ];
