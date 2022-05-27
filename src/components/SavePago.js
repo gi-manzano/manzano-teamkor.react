@@ -31,7 +31,7 @@ const SavePago = () => {
         const carritoCollection = collection ( db, 'carrito') 
             
         addDoc (carritoCollection, carrito).then ((response ) => { 
-           console.log (response);
+           console.log (response.id);
           })
         }  
         
