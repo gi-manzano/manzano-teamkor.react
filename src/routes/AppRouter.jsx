@@ -13,7 +13,8 @@ import Contacto from "../pages/Contacto";
 // import PantalonRided from "../components/Store/PantalonRided";
 // import Indumentaria from "../components/Store/Indumentaria";
 import ItemListContainer from "../components/itemListContainer/ItemListContainer";
-import Pago from "../components/Finalizado/Pago";
+import Finalizado from "../components/Finalizado/Finalizado";
+import SavePago from "../components/SavePago";
 
 
 
@@ -45,7 +46,8 @@ const AppRouter = () => {
                 {/* <Route path='/PantalonRider' element={<PantalonRided/>}/>
                 <Route path='/indumentaria' element={<Indumentaria/>}/> */}
                 <Route path='/Lista' element={<ItemListContainer/>}/>
-                <Route path='/Pago' element={<Pago/>}/>
+                <Route path='/pago' element={<SavePago/>}/>
+                <Route path='Fianlizado' element={<Finalizado/>}/>
                 
               </Routes>
             </BrowserRouter>

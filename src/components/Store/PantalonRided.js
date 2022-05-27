@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 const PantalonRided = () => {
 
-   const [indumentaria, setindumentaria] = useState({})
+   const [indumentaria, setindumentaria] = useState([])
     
     
 

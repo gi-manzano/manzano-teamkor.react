@@ -4,7 +4,12 @@ import React, { createContext, useContext, useState } from "react"
 const CartContext = createContext()
 export const useCartContext = () => useContext(CartContext)
 
+// export const useCart = () => {
+// 	return useContext (CartContextProvider)
+// }
+
 const CartContextProvider = ({ children }) => {
+	
 	// Logica carrito de compras
 	const [cart, setCart] = useState([])
 	

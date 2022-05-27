@@ -9,7 +9,7 @@ const ItemContainer = () => {
 
     const darkMode = useContext (DarkModeContext)
     const [clothes, setclothes] = useState([]);
-    const [loading, setLoading] = useState (true)
+    const [loading, setLoading] = useState ([true])
 
     
     useEffect(() => {

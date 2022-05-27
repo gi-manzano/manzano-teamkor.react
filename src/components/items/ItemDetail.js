@@ -6,7 +6,7 @@ import ItemCount from '../../ItemCount/ItemCount'
 
 const ItemDetail = () => {
   const { clothesId } = useParams ()
-  const [clothes, setclothes] = useState( {} )
+  const [clothes, setclothes] = useState( [] )
 
  
 useEffect (  () => {
@@ -28,7 +28,7 @@ const getItemDetail = () => {
     })
   }; 
 
-const [isInCart, setIsInCart]= useState (true);
+const [isInCart, setIsInCart]= useState ([ true ]);
 
 const {cart} = useCartContext();
 console.log (cart);
