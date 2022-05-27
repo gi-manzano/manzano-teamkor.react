@@ -1,12 +1,16 @@
 import React, { createContext, useContext, useState } from "react"
 
 
-const CartContext = createContext()
+const CartContext = createContext({
+	carrito: [],
+	addToCart: () => {},
+	deleteFromCart: () => {}
+
+});
+
+
 export const useCartContext = () => useContext(CartContext)
 
-// export const useCart = () => {
-// 	return useContext (CartContextProvider)
-// }
 
 const CartContextProvider = ({ children }) => {
 	
@@ -31,6 +35,9 @@ const CartContextProvider = ({ children }) => {
 		setCart((previousCart) => [...newCart, products])
 		}
 	}
+
+
+
 	// delete item de cart
 	const deleteFromCart = (id) => {
 		const productsRemoved = cart.filter((products) => products.id !== id);
@@ -67,7 +74,8 @@ const CartContextProvider = ({ children }) => {
 				setCart,
 				isInCart,
 				calcularTotal,
-				cantidadInCart,	
+				cantidadInCart,
+				
 			}}
 		>
 			{children}
@@ -78,4 +86,7 @@ const CartContextProvider = ({ children }) => {
 export default CartContextProvider;
 
 
+export const useCart = () => {
+	return useContext (CartContext)
+};
 

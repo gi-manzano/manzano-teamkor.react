@@ -1,12 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import CartContextProvider, { useCartContext } from '../context/CartContext';
+import {  addDoc, collection, getFirestore } from 'firebase/firestore';
+
+import { useCartContext } from '../context/CartContext';
+
 
 const SavePago = () => {
 
-    const { cart, calcularTotal } = useCartContext (CartContextProvider);
-    // const {cantidadInCart} = useCartContext (CartView)
+    const { cart, calcularTotal} = useCartContext ( );
     
+    
+    
+    const saveCarritoHandler = () => {
         const user = {
         name: '',
         phone: '',
@@ -19,12 +22,25 @@ const SavePago = () => {
         total: calcularTotal ()
         }
         console.log (carrito);
-       
+        saveToFirestore (carrito)
+
+    }
+
+      const saveToFirestore = (carrito) => {
+        const db = getFirestore ()
+        const carritoCollection = collection ( db, 'carrito') 
+            
+        addDoc (carritoCollection, carrito).then ((response ) => { 
+           console.log (response);
+          })
+        }  
+        
 
   return (
-    <div>Pago
-    {/* {CartView.map ( c => <li key={c}> {c} </li>)} */}
-    <Link to='/Home' className='btn'> Regresar a inicio</Link>
+    <div className='card-body'> Pago
+    {/* {cart.map (carrito => <div key={carrito}> {carrito}</div> )} */} 
+     
+    <button onClick={saveCarritoHandler} className='btn'> salvar carrito</button>
     </div>
   )
 

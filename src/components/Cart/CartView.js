@@ -18,7 +18,7 @@ return (
                 <p>Total: $ {products.precio * products.quantity}</p>
                 <button className="btn bg-pink-600" onClick={ ()=> deleteFromCart(products.id) }>Delete</button><hr/><br/><br/>   
             </div>   
-        ))} <h1>Total de tu compra: $ {calcularTotal ()}</h1><hr/><hr/> <Link to='/pago' className="btn">Raelizar Pago</Link>
+        ))} <h1>Total de tu compra: $ {calcularTotal ()}</h1><hr/><hr/> <Link to='/SavePago' className="btn">Raelizar Pago</Link>
     </div>      
 </div> 
 )}
