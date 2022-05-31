@@ -19,13 +19,8 @@ const Indumentaria = () => {
       const IndumentariaColection = collection (db, 'items')
       getDocs (IndumentariaColection).then (snapshot => {
           if (snapshot.size > 0 ) {
-              console.log (snapshot.docs);
               const ids = snapshot.docs.map (docs => docs.id).join(',')
-              console.log ('ids: ', ids);
-
-
               const indumentariaData = snapshot.docs.map ( docs => ({'id': docs.id, ...docs.data() } ) )
-            console.log (indumentariaData);
             setIndumentaria(indumentariaData);
             }
       })
@@ -50,7 +45,11 @@ const Indumentaria = () => {
     {indumentaria.map( indumentaria => <IndumentariaCard key={indumentaria.id} item={indumentaria}/>)}
     <div className='card bg-sky-800'>Indumentaria de Oferta
     {indumentariaOferta.map (indumentaria => <li key={indumentaria.id}> {indumentaria.titulo} {indumentaria.precio} </li>)} </div>
+  
+  
+  
   </>
+
   )
 }
 

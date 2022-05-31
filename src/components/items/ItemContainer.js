@@ -34,7 +34,7 @@ const ItemContainer = () => {
 return (
 
     <section>
-    <div className={ darkMode ? 'bg-black text-white' : 'bg-white text-black'}>
+    <div className={ darkMode ? 'bg-black text-white' : 'bg-white text-magenta'} >
         <strong>{ darkMode ? 'Modo: On' : 'Modo: Off'}</strong>
         {(clothes.map ( clothes => <ItemCard key={clothes.id} data={clothes} />))}   
     </div>

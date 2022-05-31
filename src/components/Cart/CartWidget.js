@@ -14,6 +14,7 @@ function CartWidget () {
       </label>
       </div>
       
+      
     )
 };
 

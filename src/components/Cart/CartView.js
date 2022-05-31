@@ -1,15 +1,15 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import {useCartContext} from "../../context/CartContext"
+
 
 function CartView () {
 
     const { cart, calcularTotal, deleteFromCart } = useCartContext ();
 
 return (
-    
+ 
 <div className="card-body">
-    <div className="card w-96 bg-neutral-400 text-primary-content">
+    <div className="card w-96 bg-neutral-400 text-primary-content text-white">
         {cart.map (products => (
             <div key= {products.id}>
                 <h1>{products.name}</h1>
@@ -20,6 +20,7 @@ return (
             </div>   
         ))} <h1>Total de tu compra: $ {calcularTotal ()}</h1><hr/><hr/> <Link to='/SavePago' className="btn">Raelizar Pago</Link>
     </div>      
-</div> 
+</div>
+ 
 )}
 export default CartView;

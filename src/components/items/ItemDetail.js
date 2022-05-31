@@ -1,10 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useCartContext } from '../../context/CartContext'
+import { DarkModeContext } from '../../context/darkModeContext'
 import { itemData } from '../../data/itemData'
 import ItemCount from '../../ItemCount/ItemCount'
 
 const ItemDetail = () => {
+  const darkMode = useContext (DarkModeContext)
   const { clothesId } = useParams ()
   const [clothes, setclothes] = useState( [] )
 
@@ -39,31 +41,42 @@ function onAdd (count) {
 
   return (
     
-  <div className='flex flex-col m-20 border-2 rounded-lg'>
+   <div className={ darkMode ? 'bg-black text-white' : 'bg-white text-magenta'}>
+   <stro>{ darkMode ? 'Modo: On' : 'Modo: Off'}</stro>
+    <div className='py-10 flex justify-center'>
+    <div className='flex flex-col m-20 border-2 rounded-lg'>
+    <p className='pb-5 m-2 text-2xl text-black'>Detalle de producto!</p>
+    <div className='text-justify-center ml-4 text-black'>
+      <img className='max-w-xs hover:shadow-lg transition duration-300 ease-in-out rounded-lg ' src= {clothes.img} alt={clothes.id}/> 
+      <hr/> 
+      <br/>
+      <div>{clothes.name}</div>
+      <div>{clothes.tipo}</div>
+      <div>Stock: {clothes.stock}</div>
+      <h3>$ {clothes.precio}</h3>
+    </div>
+    <div className='inline-flex rounded-md mx-4 mt-4 md:mx-1'>
+    <button type='button' className="btn card-actions m-2 bg-indigo-500 transition duration-150 ease-out hover:ease-in">
+      <Link className="inline-block align-middle m-4 text-white" to='/clothes'> Seguir comprando </Link>
+    </button>
+    </div>
     
-      <p className='pb-5 m-2 text-2xl'>Detalle de producto!</p>
-      <div className='text-justify-center ml-4 text-withe'>
-        <img className='max-w-xs hover:shadow-lg transition duration-300 ease-in-out rounded-lg ' src= {clothes.img} alt={clothes.id}/> 
-        <hr/> 
-        <br/>
-        <div>{clothes.name}</div>
-        <div>{clothes.tipo}</div>
-        <div>Stock: {clothes.stock}</div>
-        <h3>$ {clothes.precio}</h3>
-      </div>
-      <button className="btn card-actions m-2 bg-indigo-500 transition duration-150 ease-out hover:ease-in">
-        <Link className="inline-block align-middle m-4 text-white" to='/clothes'> Seguir comprando </Link>
-      </button>
-      
-      {isInCart ? 
-          ( <button className='btn card-actions m-2 bg-indigo-500 transition duration-150 ease-out hover:ease-in'> <Link to="/carrito" className="inline-block align-middle m-4 text-white"> 
-          Ver carrito
-            </Link></button>
-          ) : ( <ItemCount stock={clothes.stock} onAdd={onAdd} />)
-      }
-      <ItemCount stock={clothes.stock} onAdd={onAdd} id={clothes.id}/>
+    {isInCart ? 
 
+        ( <div className='inline-flex rounded-md mx-4 mt-4 md:mx-1'>
+          <button className='btn card-actions m-2 bg-indigo-500 transition duration-150 ease-out hover:ease-in'> 
+          <Link to="/carrito" className="inline-block align-middle m-4 text-white"> 
+          Ver carrito
+          </Link></button>
+          </div>
+        ) : ( <ItemCount stock={clothes.stock} onAdd={onAdd} />)
+    }
+    <ItemCount stock={clothes.stock} onAdd={onAdd} id={clothes.id}/>
   </div>
+  </div>
+  </div>
+ 
+  
 
   )}
 

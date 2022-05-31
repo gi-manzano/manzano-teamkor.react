@@ -34,13 +34,16 @@ const ItemCount = ({ stock, onAdd, id }) => {
 
 	return (
 	<>
-	<div className="flex flex-col text-center">
-			<div className="p-2">
-				<button onClick={handleRemove} className='border rounded-md px-1  hover:bg-sky-800'> - </button>
-				<label className="alert alert-white">{count}</label>
-				<button onClick={handleAdd} className='border rounded-md px-1  hover:bg-sky-800'> + </button>
+	
+	<div className="justify-items-center">
+			<div className="inline-flex rounded-md content-center" role="group">
+				<button type='button' onClick={handleRemove} className='w-15 py-1 px-5 inline-flex border-0 px-3 mx-1 focus:outline-none bg-pink-800 hover:bg-sky-800 hover:text-white rounded-l-full text-base mt-4 md:mt-0 text-lg font-bold'> - </button>
+				<label  type='label' className="w-15 py-1 px-3 inline-flex border-0 px-3 mx-1 focus:outline-none bg-transparent text-base mt-4 md:mt-0 text-lg font-bold">{count}</label>
+				<button type='button' onClick={handleAdd} className='w-15 py-1 px-5 inline-flex border-0  px-3 mx-1 focus:outline-none bg-pink-800 hover:bg-sky-800 hover:text-white rounded-r-full text-base mt-4 md:mt-0 text-lg font-bold'> + </button>
 			</div>
-		<div><button className="btn bg-pink-800" onClick={() => handleClick(id, count)}> Agregar al Carrito </button></div>
+		<div className="inline-flex rounded-md mx-4 mt-4 md:mx-1" role='group' >
+    <button type='button' className="flex items-center border-0  py-1 px-3 mt-10 focus:outline-none bg-indigo-500 hover:bg-pink-800 hover:text-white rounded-full text-base md:mt-0  text-lg font-bold m-20 p-10" onClick={() => handleClick(id, count)}> Agregar al Carrito </button>
+    </div>
 	</div>		
 	</>
 	)

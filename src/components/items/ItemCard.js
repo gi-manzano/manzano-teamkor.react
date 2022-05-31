@@ -23,6 +23,7 @@ const ItemCard = ( {data}) => { const { tipo, name, precio , id, img} = data;
       </div> 
     </div>
   </div>
+
   )
 }
 export default ItemCard
