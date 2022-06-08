@@ -28,9 +28,10 @@ const SavePago = () => {
       const target = event.target;
       const value = target.value;
       const nameInput = target.name;
-
+      
       setUser({ user , [nameInput]: value });
   }
+  
   console.log(user)
 
  
@@ -52,10 +53,10 @@ const SavePago = () => {
         saveToFirestore (carrito)
         deleteCart ();
     } 
-        
+ 
     const saveToFirestore = async (carrito) => {
       const db = getFirestore ()   
-      const { id } = await addDoc (collection ( db, 'carrito',) , carrito)
+      const { id } = await addDoc (collection ( db, 'carrito') , carrito)
       
 console.log(id);
     }
@@ -63,35 +64,33 @@ console.log(id);
 
   return (
     <>
-     <div className={ darkMode ? 'bg-black text-white' : 'bg-white text-black'}>
+      <div className={ darkMode ? 'bg-black text-white' : 'bg-white text-black'}>
      <strong>{ darkMode ? 'Modo: On' : 'Modo: Off'}</strong>
         <div className="py-12 flex justify-center">
           <div className="max-w-md mx-auto  md:max-w-xl mx-2">
             <form className="md:flex  ">
               <div className="w-full p-4 px-5 py-5">
                   <div className="flex flex-row mb-6">
-                      <h2 className="text-3xl font-semibold">
-                          Formulario de pago y envío
-                      </h2>
+                      <h2 className="text-3xl font-semibold"> Formulario de pago y envío </h2>
                   </div>
                     <div className="mb-6">
                         <span className="text-white-100 body-font font-medium ml-4">Datos personales</span>
                         <div className="grid md:grid-cols-2 md:gap-2">
-                            <input type="text" name="nombre" onChange={(event) => handleInput(event)}
+                            <input type="text" name="Nombre" onChange={(event) => handleInput(event)}
                             value={user.nombre} 
                             className="border rounded h-10 w-full focus:outline-none focus:border-green-600 px-2 mt-2 text-sm text-black"
                             placeholder="Nombre*"/>
-                            <input type="text" name="apellido" onChange={(event) => handleInput(event)}
+                            <input type="text" name="Apellido" onChange={(event) => handleInput(event)}
                             value={user.apellido} 
                             className="border rounded h-10 w-full focus:outline-none focus:border-green-600 px-2 mt-2 text-sm text-black"
                             placeholder="Apellido*" />
                         </div>
                         <div className="grid md:grid-cols-3 md:gap-2">
-                            <input type="email" name="mail" onChange={(event) => handleInput(event)}
+                            <input type="email" name="Email" onChange={(event) => handleInput(event)}
                             value={user.email} 
                             className="border rounded h-10 w-full focus:outline-none focus:border-green-600 px-2 mt-2 text-sm col-start-1 col-end-3 text-black"
                             placeholder="E-mail*" />
-                            <input type="number" name="celular" onChange={(event) => handleInput(event)}
+                            <input type="number" name="Celular" onChange={(event) => handleInput(event)}
                             value={user.celular} 
                             className="border rounded h-10 w-full focus:outline-none focus:border-green-600 px-2 mt-2 text-sm text-black "
                             placeholder="Celular*" />
@@ -99,13 +98,13 @@ console.log(id);
                     </div>
                   <div className="mb-6">
                       <span className="text-white-100 body-font font-medium ml-4">Dirección de envío</span>
-                      <input type="text" name="direccion" onChange={(event) => handleInput(event)}
+                      <input type="text" name="Direccion" onChange={(event) => handleInput(event)}
                         className="border rounded h-10 w-full focus:outline-none focus:border-green-600 px-2 mt-2 text-sm text-black"
                         placeholder="Calle y Número*" />
                       <div className="grid md:grid-cols-2 md:gap-2">
                       <input type="number" name="cp" onChange={(event) => handleInput(event)}
                         className="border rounded h-10 w-full focus:outline-none focus:border-green-600 px-2 mt-2 text-sm text-black"
-                        placeholder="Código Postal*" />
+                        placeholder="CP*" />
                       </div>
                       <input type="text" name="provincia" onChange={(event) => handleInput(event)}
                         className="border rounded h-10 w-full focus:outline-none focus:border-green-600 px-2 mt-2 text-sm text-black"
@@ -117,9 +116,9 @@ console.log(id);
                         <input type="number" name="tarjeta" onChange={(event) => handleInput(event)}
                             value={user.tarjeta}
                             className="border rounded h-10 w-full focus:outline-none focus:border-green-600 px-2 mt-2 text-sm col-start-1 col-end-3 text-black" 
-                            placeholder="Número de tarjeta*" />
+                            placeholder="N Tarjeta*" />
                         <input
-                            type="number" name="cvv" onChange={(event) => handleInput(event)}
+                            type="text" name="cvv" onChange={(event) => handleInput(event)}
                             value={user.cvv}
                             className="border rounded h-10 w-full focus:outline-none focus:border-green-600 px-2 mt-2 text-sm text-black" 
                             placeholder="CVV*" />
@@ -131,11 +130,11 @@ console.log(id);
                               className="border rounded h-10 w-full focus:outline-none focus:border-green-600 px-2 mt-2 text-sm col-start-1 col-end-3 text-black"
                               placeholder="Nombre y Apellido*" />
                           <input
-                              type="number"
+                              type="text"
                               name="vencimiento" onChange={(event) => handleInput(event)}
                               value={user.vencimiento}
                               className="border rounded h-10 w-full focus:outline-none focus:border-green-600 px-2 mt-2 text-sm text-black"
-                              placeholder=" DD/MM/AAAA*" />
+                              placeholder=" DD/AAAA*" />
                       </div>
                   </div>
 
@@ -156,7 +155,7 @@ console.log(id);
                         <Link to="../clothes">
                             <button
                                 type="button"
-                                className="btn bg-gradient-to-r from-orange-600 to-blue-500 hover:from-pink-600 hover:to-yellow-500" >
+                                className="btn bg-gradient-to-r from-yellow-600 to-blue-500 hover:from-pink-600 hover:to-yellow-500 text-white" >
                                 Home
                             </button>
                         </Link>

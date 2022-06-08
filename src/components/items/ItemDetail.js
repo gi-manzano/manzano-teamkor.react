@@ -1,12 +1,11 @@
-import { useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useCartContext } from '../../context/CartContext'
-import { DarkModeContext } from '../../context/darkModeContext'
 import { itemData } from '../../data/itemData'
 import ItemCount from '../../ItemCount/ItemCount'
 
 const ItemDetail = () => {
-  const darkMode = useContext (DarkModeContext)
+ 
   const { clothesId } = useParams ()
   const [clothes, setclothes] = useState( [] )
 
@@ -41,12 +40,11 @@ function onAdd (count) {
 
   return (
     
-   <div className={ darkMode ? 'bg-black text-white' : 'bg-white text-magenta'}>
-   <stro>{ darkMode ? 'Modo: On' : 'Modo: Off'}</stro>
+   
     <div className='py-10 flex justify-center'>
     <div className='flex flex-col m-20 border-2 rounded-lg'>
-    <p className='pb-5 m-2 text-2xl text-black'>Detalle de producto!</p>
-    <div className='text-justify-center ml-4 text-black'>
+    <p className='pb-5 m-2 text-2xl'>Detalle de producto!</p>
+    <div className='text-justify-center ml-4 text-withe'>
       <img className='max-w-xs hover:shadow-lg transition duration-300 ease-in-out rounded-lg ' src= {clothes.img} alt={clothes.id}/> 
       <hr/> 
       <br/>
@@ -74,7 +72,7 @@ function onAdd (count) {
     <ItemCount stock={clothes.stock} onAdd={onAdd} id={clothes.id}/>
   </div>
   </div>
-  </div>
+ 
  
   
 

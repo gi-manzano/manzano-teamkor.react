@@ -42,7 +42,7 @@ const ItemCount = ({ stock, onAdd, id }) => {
 				<button type='button' onClick={handleAdd} className='w-15 py-1 px-5 inline-flex border-0  px-3 mx-1 focus:outline-none bg-pink-800 hover:bg-sky-800 hover:text-white rounded-r-full text-base mt-4 md:mt-0 text-lg font-bold'> + </button>
 			</div>
 		<div className="inline-flex rounded-md mx-4 mt-4 md:mx-1" role='group' >
-    <button type='button' className="flex items-center border-0  py-1 px-3 mt-10 focus:outline-none bg-indigo-500 hover:bg-pink-800 hover:text-white rounded-full text-base md:mt-0  text-lg font-bold m-20 p-10" onClick={() => handleClick(id, count)}> Agregar al Carrito </button>
+    <button type='button' className="btn card-actions m-2 bg-indigo-500 transition duration-150 ease-out hover:ease-in" onClick={() => handleClick(id, count)}> Agregar al Carrito </button>
     </div>
 	</div>		
 	</>
